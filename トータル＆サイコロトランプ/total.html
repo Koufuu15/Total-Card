@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src = "total.js"></script>
+        <style type="text/css">
+            .active{
+                background-color:red
+            }
+        </style>
+    </head>
+    <body>
+        <title>トータルトランプ</title>
+        <div id = "parent" style = "position:absolute; top:80px; left:10px; margin:1em;"></div>
+            <script language = "javascript" type = "Text/javascript">
+                document.bgColor = "green";
+                window.resizeTo(900,800);
+                id = 0;
+                function but(id){
+                    button = document.createElement('button');
+                    button.class = "button";
+                    button.style = "width:90px; height:130px; background:url('カード/ura.jpg'); background-repeat: no-repeat; background-size: cover;";
+                    parent = document.getElementById("parent");
+                    parent.appendChild(button);
+                    id++;
+                }
+                for(j=0; j<52; j++){
+                    but(j);
+                }
+                
+                
+                
+            </script>
+            <div id = "tup" style = "position:absolute; top:0px; left:20%; width:700px; height:90px; background-color:brown; font-size:xxx-large; font-family:SimSun;">
+            後攻 <span id = "user2" style = "position:absolute; left:150px; width:450px; height:90px; font-family:SimSun;"></span>
+            <span id = "maisu2" style = "position:absolute; left:600px; font-size:xxxx-large; font-family:SimSun;">0</span></div>
+            <div id = "tdown" style = "position:absolute; top:620px; left:20%; width:700px; height:90px; background-color:brown; font-size:xxx-large; font-family:SimSun;">
+            先攻 <span id = "user" style = "position:absolute; left:150px; width:500px; height:90px; font-family:SimSun;"></span>
+            <span id = "maisu" style = "position:absolute; left:600px; font-size:xxxx-large; font-family:SimSun">0</span></div>
+            <div id = "front" style = "position:absolute; top:100px; left:0px; width:100%; height:500px; background-color: rgba(169, 169, 169,0.9); text-align:center; font-family:SimSun;">
+            <div id = "title" style = "position:absolute; top:100px; left:230px; font-size:80px; font-family:SimSun; font-weight: bold;">トータルトランプ</div>
+            <button id = "yes" style = "position:absolute; top:250px; left:200px; width:300px; height:150px; font-size:xxx-large; font-family:SimSun;" onclick = "opening()">次へ</button>
+            <button id = "rule" style = "position:absolute; top:250px; left:600px; width:300px; height:150px; font-size:xxx-large; font-family:SimSun;" onclick = "() => window.open('rule.txt');">ルール説明へ</button></div>
+    </body>
+</html>
+
+<!--
+    ・this.button.id = id;
+-->

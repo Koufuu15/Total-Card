@@ -1,0 +1,55 @@
+<html>
+    <head></head>
+    <script language = "javascript" type = "Text/javascript">
+        window.resizeTo(800,900);
+        function go_back(){
+            dai = document.getElementById("dai");
+            ka = document.getElementById("ka");
+            ri = document.getElementById("ri");
+            dai.innerHTML = "どうやって遊ぶ？";
+            ka.innerHTML = "一人でpcと";
+            ri.innerHTML = "二人で";
+            ka.onclick = kari(this);
+            ri.onclick = kari(this);
+        }
+
+        function kari(id){
+            dai = document.getElementById("dai");
+            ka = document.getElementById("ka");
+            ri = document.getElementById("ri");
+            if(id == "ka"){
+                sessionStorage.setItem('hutari',false);
+            }else{
+                sessionStorage.setItem('hutari',true);
+            }
+
+            document.bgColor = "green";
+            document.getElementById("back").style.display = "block";
+            dai.innerHTML = "どっちのゲームをプレイする？";
+            ka.innerHTML = "トータルトランプ";
+            ka.onclick = function(){
+                window.open("file:///C:/Users/Owner/Desktop/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/JavaScript/JavaScript/%E3%83%88%E3%83%BC%E3%82%BF%E3%83%AB%EF%BC%86%E3%82%B5%E3%82%A4%E3%82%B3%E3%83%AD%E3%83%88%E3%83%A9%E3%83%B3%E3%83%97/total.html");
+            };
+            ri.innerHTML = "サイコロトランプ";
+            ri.onclick = function(){
+                window.open("file:///C:/Users/Owner/Desktop/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/JavaScript/JavaScript/%E3%83%88%E3%83%BC%E3%82%BF%E3%83%AB%EF%BC%86%E3%82%B5%E3%82%A4%E3%82%B3%E3%83%AD%E3%83%88%E3%83%A9%E3%83%B3%E3%83%97/sai.html");
+            };
+        }
+    </script>
+    <body>
+        <title>カードゲーム</title>
+        <canvas id = "back" style = "position:absolute; width:1300px; height:800px; 
+        background:green;">
+        </canvas>
+        <div style = "position:absolute; top:100px; left:100px; height:150; font-size:xx-large;">
+            <div id = "dai">どうやって遊ぶ？</div>
+        </div>
+        <button style = "position:absolute; top:350px; left:100px; width:300px; height:200px;
+         background-color:brown; font-size:xx-large;"  id = "ka" onclick = "kari(this.id);">一人でpcと</button>
+        <button style = "position:absolute; top:350px; left:500px; width:300px; height:200px;
+         background-color:brown; font-size:xx-large;" id = "ri" onclick = "kari(this.id);">二人で</button>
+        <button style = "position:absolute; top:100px; left:650px; width:80px; height:80px; 
+        background-color:brown; font-size:x-large; display:none;" id = "back" onclick = "go_back()">戻る</button>
+        
+    </body>
+</html>
